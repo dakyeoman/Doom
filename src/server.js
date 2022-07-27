@@ -33,8 +33,12 @@ wsServer.on("connection", (socket) => {
 // Room end
 
 
-const handleListen = () => console.log(`Listening on http://localhost:3000`);
+const handleListen = () => console.log(`Listening on http://localhost:3000,  https://4a20-143-248-48-96.jp.ngrok.io`);
 httpServer.listen(3000, handleListen);
+
+/* NGROK MEMO
+https://velog.io/@dwa_all/ngrok-%EB%A1%9C%EC%BB%AC-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%99%B8%EB%B6%80%EC%97%90-%EA%B3%B5%EC%9C%A0%ED%95%98%EA%B8%B0
+*/
 
 
 

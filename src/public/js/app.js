@@ -76,9 +76,17 @@ function handleCameraClick() {
   }
 }
 
+//*Sender: control media stream track that being sent to the other browser
 async function handleCameraChange() {
   await getMedia(camerasSelect.value);
-}
+  if(myPeerConnection){
+    const videoTrack = myStream.getVideoTracks()[0]
+    const videoSender = myPeerConnection
+    .getSenders()
+    .find((sender) => sender.track.kind === "video");
+  videoSender.replaceTrack(videoTrack); 
+  };
+};
 
 muteBtn.addEventListener("click", handleMuteClick);
 cameraBtn.addEventListener("click", handleCameraClick);
@@ -156,8 +164,8 @@ function handleIce(data) {
 };
 
 function handleAddStream(data){
-  console.log("Got an event from my peer");
-  console.log(data);
+  const peerFace = document.getElementById("peerFace");
+  peerFace.srcObject = data.stream;
 };
 
 //9:00
