@@ -22,7 +22,7 @@ const heightControls = document.querySelector('#jsHeight');
 
 // Variable
 let canvasWidth = 546;
-let canvasHeight = 680;
+let canvasHeight = 680; //조정해야 할 수 있음. 아래 작업 영역 생각 못 함:-)
 let isPainting = false;
 let isFilling = false;
 

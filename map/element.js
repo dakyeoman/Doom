@@ -184,7 +184,7 @@ function mouseReleased(){
 
 
 //copy feature
-document.onpaste = function(pasteEvent) {
+document.onbacste = function(pasteEvent) {
     // 첫 번째 항목을 고려합니다(여러 항목에 대해 쉽게 확장할 수 있음)
     var item = pasteEvent.clipboardData.items[0];
 

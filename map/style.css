@@ -1,6 +1,6 @@
 body {
   min-width: 700px;
-  background-color: #f6f9fc;
+  background-color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
@@ -14,7 +14,7 @@ body {
   user-select: none;
 }
 .title {
-  color: 1px solid rgba(0, 0, 0, 0.8);
+  color: 1px solid rgba(255, 255, 255);
   font-weight: bold;
   font-size: 20px;
   text-align: center;
