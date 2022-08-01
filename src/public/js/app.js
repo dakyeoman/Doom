@@ -1,3 +1,5 @@
+
+
 const socket = io();
 const myFace = document.getElementById("myFace");
 const muteBtn = document.getElementById("mute");
@@ -129,6 +131,7 @@ socket.on("welcome", async () => {
   socket.emit("offer", offer, roomName);
 });
 
+
 socket.on("offer", async (offer) => {
   console.log("Received the offer");
   myPeerConnection.setRemoteDescription(offer);
@@ -150,7 +153,20 @@ socket.on("ice", (ice) => {
 
 //* RTC Code
 function makeConnection() {
-  myPeerConnection = new RTCPeerConnection();
+  myPeerConnection = new RTCPeerConnection({
+    iceServers: [
+      {
+        urls:[
+          "stun:stun.l.google.com:19302",
+          "stun:stun1.l.google.com:19302",
+          "stun:stun2.l.google.com:19302",
+          "stun:stun3.l.google.com:19302",
+          "stun:stun4.l.google.com:19302",
+          // need to run my own STUN server
+        ],
+      },
+    ],
+  });
   myPeerConnection.addEventListener("icecandidate", handleIce);
   myPeerConnection.addEventListener("addstream", handleAddStream);
   myStream
@@ -168,7 +184,25 @@ function handleAddStream(data){
   peerFace.srcObject = data.stream;
 };
 
-//9:00
+//Choose NS&NNS
+function reply_click(clicked_id){
+  console.log(clicked_id);
+  userInfo = clicked_id;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CHECK createDataChannel() 
 
 /*CHAT AND SOCKET.IO
 const socket = io();

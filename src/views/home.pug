@@ -5,11 +5,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Noom
-        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+        style  
+            include style.css 
     body
         header
-            h1 SE
-    
+            h1#title PRJ-ASR 
         main
             div#welcome
                 form 
@@ -23,7 +23,17 @@ html(lang="en")
                     select#cameras
                         option(value = "device") Camera Option
                     video#peerFace(autoplay,playsinline, width="300", height="300")
+            div#blank
+            section
+            div
+                input(type="radio" id="ns" name="select" value="ns" onClick="reply_click(this.id)")
+                label(for="ns")
+                    h2 Native 
+            div
+                input(type="radio" id="nns" name="select" value="nns" onClick="reply_click(this.id)")
+                label(for="nns")
+                    h2 Non-native 
+            div.button-box
+                button Open Map 
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js") 
-
-        

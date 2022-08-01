@@ -1,0 +1,98 @@
+body {
+  background-color: #000000;
+}
+#title {
+  color: aliceblue;
+}
+#blank {
+  margin: 30px;
+  border: 30px solid #transparent
+  padding: 30px;
+}
+
+/* Submit Button */
+.button-box {
+  padding: 10px 0;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  width: 80%;
+  margin-top: 1.2em;
+  padding: 1em;
+  max-width: 220px;
+  font-size: 0.9em;
+  color: #d42d78;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  color: #6f6f6f;
+}
+
+/*NSorNNS button*/
+
+body {
+  padding: 1rem;
+  color: hsla(215, 5%, 50%, 1);
+}
+h1 {
+  color: hsla(215, 5%, 10%, 1);
+  margin-bottom: 2rem;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+}
+section > div {
+  flex: 1;
+  padding: 0.5rem;
+}
+input[type="radio"] {
+  display: none;
+  &:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  &:disabled ~ label {
+    color: hsla(150, 5%, 75%, 1);
+    border-color: hsla(150, 5%, 75%, 1);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+label {
+  height: 100%;
+  display: block;
+  background: white;
+  border: 2px solid hsla(150, 75%, 50%, 1);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  /*margin: 1rem;*/
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+  position: relative;
+}
+input[type="radio"]:checked + label {
+  background: hsla(150, 75%, 50%, 1);
+  color: hsla(215, 0%, 100%, 1);
+  box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
