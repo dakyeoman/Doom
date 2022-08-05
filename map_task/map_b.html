@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meata charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Map B</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+  </head>
+
+  <body>
+    <div id="title">Map B</div>
+    <!--<div class="controls">
+      <div class="controls__size">
+        <div class="text">Width :</div>
+        <input class="controls__width" type="number" id="jsWidth" value="600" />
+        <div class="text">Height :</div>
+        <input
+          class="controls__height"
+          type="number"
+          id="jsHeight"
+          value="500"
+        />
+        <button id="jsResize">Resize</button>
+      </div>
+    </div>-->
+    <div class="content">
+      <canvas id="jsCanvas" class="canvas"></canvas>
+    </div>
+    <div class="controls">
+      <div class="controls__range">
+        <input
+          type="range"
+          id="jsRange"
+          min="0.1"
+          max="5.0"
+          value="2.5"
+          step="0.1"
+        />
+      </div>
+
+      <div class="controls__btns">
+        <button id="jsMode">Fill</button>
+        <button id="jsSave">Save</button>
+        <button id="jsReset" onClick="window.location.reload()" id="refresh">
+          Reset
+        </button>
+      </div>
+
+      <div class="controls__colors" id="jsColors">
+        <div
+          class="controls__color jsColor"
+          style="background-color: #2c2c2c"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: white"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #ff3b30"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #1d722b"
+        ></div>
+
+        <label for="jsMyColorControl">
+          <div
+            class="controls__color jsColor"
+            id="jsMyColor"
+            style="background-color: white"
+          >
+            My
+          </div>
+        </label>
+        <input
+          type="color"
+          id="jsMyColorControl"
+          name="jsMyColorControl"
+          value="#ffffff"
+          style="display: none"
+        />
+      </div>
+    </div>
+
+    <!--<img
+    id="scream"
+    width="220"
+    height="277"
+    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fblx41k%2Fbtq31asAHuU%2FnkcKYglcscK8pd60WNysNk%2Fimg.jpg"
+    alt="The Scream"
+    />-->
+    <script src="app.js"></script>
+  </body>
+</html>

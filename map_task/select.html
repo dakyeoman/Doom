@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meata charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="select.css" />
+    <title>Map</title>
+  </head>
+
+  <body>
+    <h1 id="text">Select your map!</h1>
+    <div>
+      <input
+        type="radio"
+        id="ns"
+        name="select"
+        value="ns"
+        checked
+        onclick="location.href = 'map_a.html'"
+      />
+      <label for="ns">
+        <h2>Map A</h2>
+        <p>Please select if you're ns</p>
+      </label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        id="nns"
+        name="select"
+        value="nns"
+        onclick="location.href = 'map_b.html'"
+      />
+      <label for="nns">
+        <h2>Map B</h2>
+        <p>Please select if you're nns</p>
+      </label>
+    </div>
+  </body>
+</html>

@@ -26,7 +26,6 @@ let canvasHeight = 680; //조정해야 할 수 있음. 아래 작업 영역 생�
 let isPainting = false;
 let isFilling = false;
 
-
 //#1 고정물들 위치시키기
 window.onload = function() {
     var canvas = document.getElementById("jsCanvas");
@@ -75,8 +74,8 @@ window.onload = function() {
     var start = new Image();
     start.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbI6cjIy9i6_qjeWXts4yj1c47XlUm1HA9pBQBnQpNLNhlk_ODZdRyFp4wpctcqsBORfo&usqp=CAU";
     ctx.drawImage(start, 0, 300, 70, 70);
+  };
 
-};
 // Init setting
 const initSetting = () => {
   // Set width, height of canvas
@@ -99,7 +98,9 @@ const initSetting = () => {
   })
   // Set black button clicked
   colors[0].classList.add(BTN_CLICKED_CN);
+  
 }
+
 // Init event
 const initEvent = () => {
   // Add event to Canvas
@@ -139,8 +140,11 @@ const initEvent = () => {
   if (resizeBtn) {
     resizeBtn.addEventListener("click", handleResizeClick);
   }
-  
 }
+
+
+  
+
 // Set start paint
 const startPainting = () => {
   isPainting = true;
@@ -247,4 +251,9 @@ function handleModeClick() {
       ctx.canvas.style.cursor = "pointer";
   }
 }
+
+var elemX = 250;
+var elemY = 250;
+var elemSize = 100;
+var dragging = false;
 

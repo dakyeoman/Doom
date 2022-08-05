@@ -13,8 +13,8 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-.title {
-  color: 1px solid rgba(255, 255, 255);
+#title {
+  color: whitesmoke;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
